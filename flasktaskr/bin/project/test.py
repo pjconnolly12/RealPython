@@ -70,7 +70,7 @@ class AllTests(unittest.TestCase):
 	def test_form_is_present(self):
 		response = self.app.get('/')
 		self.assertEqual(response.status_code, 200)
-		self.assertIn(b'Please login to access your task list', response.data)
+		self.assertIn(b'Please sign in to access your task list', response.data)
 
 	#Unregistered users cannot log in
 	def test_users_cannot_login_unless_registered(self):
@@ -93,7 +93,7 @@ class AllTests(unittest.TestCase):
 	def test_form_is_present_on_register_page(self):
 		response = self.app.get('register/')
 		self.assertEqual(response.status_code, 200)
-		self.assertIn(b'Please register to access the task list.', response.data)
+		self.assertIn(b'Please sign in to access the task list.', response.data)
 
 	def test_user_registration(self):
 		self.app.get('register/', follow_redirects=True)
