@@ -192,6 +192,8 @@ env.bak/
 
 venv.bak/
 
+bin/
+
 
 
 # Spyder project settings
